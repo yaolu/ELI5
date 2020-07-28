@@ -107,7 +107,7 @@ def main():
             print("FAILED DOWNLOADING ", fpath)
             continue
         # Extract, tokenize, and filter articles by language
-        f = open(fpath, buffering=4096)
+        f = open(fpath, buffering=4096, encoding="utf-8", errors='ignore')
         article_url = ''
         article_id  = ''
         article_txt = ''
