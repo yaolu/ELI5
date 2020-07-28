@@ -60,8 +60,8 @@ def word_url_tokenize(st, max_len=20480, max_cont_len=512):
         with time_limit(2):
             return pre_word_url_tokenize(stp)
     except TimeoutException as e:
-        print('timeout', len(st), ' --n-- '.join(st[:128].split('\n')))
-        print(' --n-- '.join(stp.split('\n')))
+        # print('timeout', len(st), ' --n-- '.join(st[:128].split('\n')))
+        # print(' --n-- '.join(stp.split('\n')))
         res = ('missed page', [])
         return res
 
